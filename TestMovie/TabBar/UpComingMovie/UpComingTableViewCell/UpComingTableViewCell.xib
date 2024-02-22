@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" rowHeight="355" id="KGk-i7-Jjw" customClass="UpComingTableViewCell" customModule="TestMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="355"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="355"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="Genre" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-yv-VuU">
+                        <rect key="frame" x="0.0" y="0.0" width="303" height="210"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="210" id="k0R-vD-rfG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX1-5j-MkK">
+                        <rect key="frame" x="16" y="215" width="271" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="qjg-hn-x6G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXd-tF-YF8">
+                        <rect key="frame" x="50" y="245" width="203" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ZNf-t5-Ted"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                <constraints>
+                    <constraint firstItem="G1h-yv-VuU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0ie-1H-H9N"/>
+                    <constraint firstAttribute="trailing" secondItem="xXd-tF-YF8" secondAttribute="trailing" constant="50" id="27w-9G-Fo5"/>
+                    <constraint firstItem="xXd-tF-YF8" firstAttribute="top" secondItem="TX1-5j-MkK" secondAttribute="bottom" constant="5" id="2Vf-0s-oKO"/>
+                    <constraint firstItem="TX1-5j-MkK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4mU-4S-vJC"/>
+                    <constraint firstItem="xXd-tF-YF8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="5Ha-3c-xH2"/>
+                    <constraint firstItem="TX1-5j-MkK" firstAttribute="top" secondItem="G1h-yv-VuU" secondAttribute="bottom" constant="5" id="N7B-Xr-ZMF"/>
+                    <constraint firstItem="G1h-yv-VuU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="N9f-eq-Ljd"/>
+                    <constraint firstAttribute="bottom" secondItem="xXd-tF-YF8" secondAttribute="bottom" id="PO9-SI-6PO"/>
+                    <constraint firstAttribute="trailing" secondItem="G1h-yv-VuU" secondAttribute="trailing" id="dxC-LJ-tsF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TX1-5j-MkK" secondAttribute="trailing" id="q92-QJ-ATd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="moviesGenre" destination="xXd-tF-YF8" id="ioj-GB-xtT"/>
+                <outlet property="moviesImage" destination="G1h-yv-VuU" id="Tqt-W6-JTX"/>
+                <outlet property="moviesTitle" destination="TX1-5j-MkK" id="u9T-8e-3FZ"/>
+            </connections>
+            <point key="canvasLocation" x="154.96183206106869" y="34.859154929577464"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Genre" width="64" height="64"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
