@@ -9,6 +9,7 @@ import UIKit
 
 class TopRatingCollectionViewCell: UICollectionViewCell {
     @IBOutlet var moviesImage: UIImageView!
+    @IBOutlet var view: UIView!
     @IBOutlet var moviesRate: UILabel!
     @IBOutlet var movieTitle: UILabel!
 
@@ -20,7 +21,12 @@ class TopRatingCollectionViewCell: UICollectionViewCell {
         moviesImage.layer.shadowColor = UIColor.systemMint.cgColor
         moviesImage.layer.shadowRadius = 4.0
         moviesImage.layer.shadowOpacity = 1.0
-        moviesRate.backgroundColor = UIColor.black
+        moviesImage.layer.masksToBounds = true
+        
+        view.layer.borderWidth = 0.5
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.cornerRadius = 5
+        view.layer.masksToBounds = true
     }
     func setupCell(topRate: TopRated) {
         moviesRate.text = "\(topRate.voteAverage)"

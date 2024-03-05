@@ -27,6 +27,7 @@ class GenreViewController: UIViewController, UICollectionViewDelegate, UICollect
         genresTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         fetchData()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,17 +47,13 @@ class GenreViewController: UIViewController, UICollectionViewDelegate, UICollect
                 DispatchQueue.main.async {
                     self.topRatingMovies.reloadData()
                 }
-            } else if let error = error {
-                print("Error fetching top-rated movies: \(error)")
-            }
+            } 
         }
         
         HomeManager.genreListhandler { [weak self] (genres, error, statusCode) in
             if let genres = genres {
                 self?.genreList = genres
                 self?.genresTable.reloadData()
-            } else {
-                print("Error fetching genre list: \(error ?? "Unknown error")")
             }
         }
     }

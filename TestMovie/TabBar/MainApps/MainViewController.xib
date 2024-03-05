@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="TestMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="onTrendingMovies" destination="nh6-zZ-BJC" id="W6O-fq-Wcc"/>
+                <outlet property="topActors" destination="CCZ-Ko-xjc" id="CHP-wD-PDO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Actors and Actris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6d-Dq-iQm">
+                    <rect key="frame" x="10" y="15" width="394" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="4xu-9S-VJf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CCZ-Ko-xjc">
+                    <rect key="frame" x="0.0" y="50" width="414" height="125"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="Hjk-a7-tYF"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZCD-92-7P4">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Trendings Movies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO2-Ql-idF">
+                    <rect key="frame" x="10" y="190" width="394" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="T72-Vv-EH9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-zZ-BJC">
+                    <rect key="frame" x="0.0" y="225" width="414" height="511"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vJS-x0-We3">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="q6d-Dq-iQm" firstAttribute="centerX" secondItem="CCZ-Ko-xjc" secondAttribute="centerX" id="0JB-IZ-bOb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nh6-zZ-BJC" secondAttribute="bottom" id="1uq-IR-OW7"/>
+                <constraint firstItem="CCZ-Ko-xjc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Ip-91-NTc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nh6-zZ-BJC" secondAttribute="trailing" id="3X3-Go-I6g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CCZ-Ko-xjc" secondAttribute="trailing" id="3eV-Ck-tAK"/>
+                <constraint firstItem="AO2-Ql-idF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="52j-PC-T53"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nh6-zZ-BJC" secondAttribute="bottom" id="Kq4-bF-bVP"/>
+                <constraint firstItem="nh6-zZ-BJC" firstAttribute="top" secondItem="AO2-Ql-idF" secondAttribute="bottom" constant="10" id="Qmn-uK-gUx"/>
+                <constraint firstItem="nh6-zZ-BJC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZIc-i7-7mt"/>
+                <constraint firstItem="q6d-Dq-iQm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="eVI-Fx-c4m"/>
+                <constraint firstItem="AO2-Ql-idF" firstAttribute="top" secondItem="CCZ-Ko-xjc" secondAttribute="bottom" constant="15" id="fxa-Yv-sIi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="nh6-zZ-BJC" secondAttribute="top" constant="-205" id="gvf-kr-n3F"/>
+                <constraint firstItem="CCZ-Ko-xjc" firstAttribute="top" secondItem="q6d-Dq-iQm" secondAttribute="bottom" constant="10" id="h23-pv-OyS"/>
+                <constraint firstItem="AO2-Ql-idF" firstAttribute="centerX" secondItem="CCZ-Ko-xjc" secondAttribute="centerX" id="vOH-EY-M2V"/>
+            </constraints>
+            <point key="canvasLocation" x="126.08695652173914" y="19.565217391304348"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

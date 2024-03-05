@@ -13,6 +13,7 @@ class DetailMovieViewController: UIViewController, UICollectionViewDelegate{
     @IBOutlet var movieImage: UIImageView!
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelDurationMovie: UILabel!
+    @IBOutlet var uiViewHD: UIView!
     @IBOutlet var labelHD: UILabel!
     @IBOutlet var labelGenreMovie: UILabel!
     @IBOutlet var labelMovieDesc: UILabel!
@@ -36,6 +37,10 @@ class DetailMovieViewController: UIViewController, UICollectionViewDelegate{
         myCollectionView.dataSource = self
         myCollectionView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         tabBarController?.tabBar.isHidden = true
+        uiViewHD.layer.borderWidth = 1
+        uiViewHD.layer.borderColor = UIColor.white.cgColor
+        uiViewHD.layer.cornerRadius = 6
+        
     }
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

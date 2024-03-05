@@ -24,18 +24,26 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.layer.masksToBounds = true
         tabBar.layer.opacity = 1.0
         
-        tabBar.backgroundColor = UIColor.black
+       
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        tabBar.backgroundColor = UIColor.white
         tabBar.isTranslucent = true
+
         tabBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        
+        tabBar.tintColor = UIColor.systemPink
+        
     }
+   
     
     private func setupTabs() {
-        let home = self.tabBarNav(with: "Home", and: UIImage(systemName: "play.house"), vc: HomeViewController())
+        let home = self.tabBarNav(with: "Home", and: UIImage(systemName: "play.house"), vc: MainViewController())
         let genre = self.tabBarNav(with: "Genre", and: UIImage(systemName: "movieclapper"), vc: GenreViewController())
         let upcoming = self.tabBarNav(with: "UpComing", and: UIImage(systemName: "timelapse"), vc: UpComingViewController())
-        let profil = self.tabBarNav(with: "Profil", and: UIImage(systemName: "person"), vc: ProfilViewController())
+        let nowPlaying = self.tabBarNav(with: "Now Playing", and: UIImage(systemName: "tv"), vc: HomeViewController())
         
-        self.setViewControllers([home, genre, upcoming, profil], animated: true)
+        self.setViewControllers([home, genre, nowPlaying, upcoming], animated: true)
         
     }
     
@@ -44,6 +52,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
+        
         
         return nav
     }

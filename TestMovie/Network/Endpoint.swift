@@ -16,6 +16,8 @@ enum Endpoint {
     case topRating(page: Int)
     case upComing(page: Int)
     case moviesWithGenre(page: Int, genreId: Int)
+    case onTrending(timeWindow: String)
+    case popularActor(page: Int)
 }
 
 extension Endpoint {
@@ -27,6 +29,10 @@ extension Endpoint {
             return ["page": page]
         case .moviesWithGenre(let page, let genreId):
             return ["page": page, "with_genres": genreId]
+        case .popularActor(let page):
+            return ["page": page]
+//        case .onTrending(let timeWindow):
+//            return ["time_window": timeWindow]
         default:
             return[:]
         }
@@ -56,6 +62,10 @@ extension Endpoint: TargetType {
             return "movie/upcoming"
         case .moviesWithGenre:
             return "discover/movie"
+        case .onTrending(let timeWindow):
+            return "trending/movie/\(timeWindow)"
+        case .popularActor:
+            return "person/popular"
         }
     }
     
@@ -73,6 +83,8 @@ extension Endpoint: TargetType {
         case .topRating:
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         case .upComing:
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+        case .popularActor:
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         default:
             return .requestPlain
